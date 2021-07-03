@@ -18,7 +18,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>我的第一篇博客 - SEB&#39;s博客</title>
+  <title>博客第一个小坑 - SEB&#39;s博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="我的第一篇博客">
+            <span class="h2" id="subtitle" title="博客第一个小坑">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-07-02 11:56" pubdate>
-        2021年7月2日 中午
+      <time datetime="2021-07-03 10:18" pubdate>
+        2021年7月3日 上午
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      5 字
+      186 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      2
        分钟
     </span>
   
@@ -225,10 +225,20 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">我的第一篇博客</h1>
+            <h1 style="display: none">博客第一个小坑</h1>
             
             <div class="markdown-body">
-              <h2 id="开始吧兄弟"><a href="#开始吧兄弟" class="headerlink" title="开始吧兄弟"></a>开始吧兄弟</h2>
+              <p><strong>问题：</strong></p>
+<p> 1.把dist下的文件拷贝到hexo source中测试时发现页面无法正常显示，但是在express环境下可以正常显示</p>
+<p><strong>解决：</strong></p>
+<ol>
+<li><p>dist文件下的Index.html单独是打不开的，详情看官方文档 <a target="_blank" rel="noopener" href="https://cli.vuejs.org/zh/guide/deployment.html#%E9%80%9A%E7%94%A8%E6%8C%87%E5%8D%97">Vue-Cli 部署</a><br><img src="https://img-blog.csdnimg.cn/20210703100630336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoaWxpWWE=,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<p> 2.翻看官方文档发现问题,因为我这个小demo是附属在hexo下的，而不是直接推送到github Pages，所以不属于域名根路径 —— <a target="_blank" rel="noopener" href="https://cli.vuejs.org/zh/config/#publicpath">Vue-Cli 配置参考</a><br> <img src="https://img-blog.csdnimg.cn/20210703100713330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoaWxpWWE=,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<p> 3.修改vue.config.js 中 publicPath 后部署到博客，页面正常显示</p>
+</li>
+</ol>
+<p><em>一个小问题弄一晚上啊，还是得多多看官方文档，尤其是当你不知道如何描述遇到的问题时候，很难高效率的查找到答案</em></p>
+
             </div>
             <hr>
             <div>
@@ -237,17 +247,10 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/start/">start</a>
+                      <a class="hover-with-bg" href="/categories/vue-cli-hexo/">vue-cli hexo</a>
                     
                   </div>
                 
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/%E6%97%A0/">无</a>
-                    
-                  </div>
                 
               </div>
               
@@ -262,15 +265,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/07/03/%E5%8D%9A%E5%AE%A2%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%9D%91/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">博客第一个小坑</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2021/07/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
+                        <span class="hidden-mobile">我的第一篇博客</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

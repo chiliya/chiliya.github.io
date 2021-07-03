@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>博客第一个小坑</title>
+    <link href="/2021/07/03/%E5%8D%9A%E5%AE%A2%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%9D%91/"/>
+    <url>/2021/07/03/%E5%8D%9A%E5%AE%A2%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%9D%91/</url>
+    
+    <content type="html"><![CDATA[<p><strong>问题：</strong></p><p> 1.把dist下的文件拷贝到hexo source中测试时发现页面无法正常显示，但是在express环境下可以正常显示</p><p><strong>解决：</strong></p><ol><li><p>dist文件下的Index.html单独是打不开的，详情看官方文档 <a href="https://cli.vuejs.org/zh/guide/deployment.html#%E9%80%9A%E7%94%A8%E6%8C%87%E5%8D%97">Vue-Cli 部署</a><br><img src="https://img-blog.csdnimg.cn/20210703100630336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoaWxpWWE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p> 2.翻看官方文档发现问题,因为我这个小demo是附属在hexo下的，而不是直接推送到github Pages，所以不属于域名根路径 —— <a href="https://cli.vuejs.org/zh/config/#publicpath">Vue-Cli 配置参考</a><br> <img src="https://img-blog.csdnimg.cn/20210703100713330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NoaWxpWWE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p> 3.修改vue.config.js 中 publicPath 后部署到博客，页面正常显示</p></li></ol><p><em>一个小问题弄一晚上啊，还是得多多看官方文档，尤其是当你不知道如何描述遇到的问题时候，很难高效率的查找到答案</em></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue-cli hexo</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>我的第一篇博客</title>
     <link href="/2021/07/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
     <url>/2021/07/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
@@ -23,19 +42,6 @@
       <tag>无</tag>
       
     </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="/2021/07/02/hello-world/"/>
-    <url>/2021/07/02/hello-world/</url>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
     
   </entry>
   
